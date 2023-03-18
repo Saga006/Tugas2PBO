@@ -14,7 +14,6 @@ import java.awt.event.*;
 public class KalkulatorBalok {
     public static void main(String[] args) {
         GUI gui = new GUI();
-        
     }
 }
 
@@ -82,9 +81,6 @@ class GUI extends JFrame implements ActionListener{
     
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == bhitung){
-            
-            
-              
             try{
                 panjang = Double.parseDouble(fpanjang.getText());
             lebar = Double.parseDouble(flebar.getText());
@@ -94,7 +90,6 @@ class GUI extends JFrame implements ActionListener{
                 lkelilingpersegi.setText("Keliling Persegi : " + balok.keliling());
                 lvolumebalok.setText("Volume Balok : " + balok.volume());
                 lluasbalok.setText("Luas Balok : " + balok.luas(tinggi)); 
-                
             }
             catch(NumberFormatException error){
                JOptionPane.showMessageDialog(null, error.getMessage());   
@@ -102,7 +97,6 @@ class GUI extends JFrame implements ActionListener{
             catch(NullPointerException error){
                JOptionPane.showMessageDialog(null, error.getMessage());   
             }
-            
         }
         if(e.getSource() == bulang){
             fpanjang.setText("");
@@ -112,7 +106,6 @@ class GUI extends JFrame implements ActionListener{
             lkelilingpersegi.setText("");
             lvolumebalok.setText("");
             lluasbalok.setText("");
-            
         }
     }
 }
