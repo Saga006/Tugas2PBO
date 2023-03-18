@@ -16,8 +16,6 @@ public class KalkulatorBalok {
         GUI gui = new GUI();
         
     }
-    
-    
 }
 
 class GUI extends JFrame implements ActionListener{
@@ -31,8 +29,8 @@ class GUI extends JFrame implements ActionListener{
     JLabel ltinggi = new JLabel("Tinggi");
     JTextField ftinggi = new JTextField(15);
     JLabel lhasil = new JLabel("Hasil : ");
-    JLabel lluaslingkaran = new JLabel("" );
-    JLabel lkelilinglingkaran = new JLabel("");
+    JLabel lluaspersegi = new JLabel("" );
+    JLabel lkelilingpersegi = new JLabel("");
     JLabel lvolumebalok = new JLabel("");
     JLabel lluasbalok = new JLabel("");
  
@@ -55,8 +53,8 @@ class GUI extends JFrame implements ActionListener{
         add(ltinggi);
         add(ftinggi);
         add(lhasil);
-        add(lluaslingkaran);
-        add(lkelilinglingkaran);
+        add(lluaspersegi);
+        add(lkelilingpersegi);
         add(lvolumebalok);
         add(lluasbalok);
         add(bhitung);
@@ -70,8 +68,8 @@ class GUI extends JFrame implements ActionListener{
         ltinggi.setBounds(10,100,120,20);
 	ftinggi.setBounds(130,100,150,20);
         lhasil.setBounds(130,130,120,20);
-        lluaslingkaran.setBounds(10,150,200,20);
-        lkelilinglingkaran.setBounds(10,170,200,20);
+        lluaspersegi.setBounds(10,150,200,20);
+        lkelilingpersegi.setBounds(10,170,200,20);
         lvolumebalok.setBounds(10,190,200,20);
         lluasbalok.setBounds(10,210,200,20);
         bhitung.setBounds(70,240,80,20);
@@ -92,8 +90,8 @@ class GUI extends JFrame implements ActionListener{
             lebar = Double.parseDouble(flebar.getText());
             tinggi = Double.parseDouble(ftinggi.getText());
                 Balok balok = new Balok(panjang,lebar,tinggi);
-                lluaslingkaran.setText("Luas Lingkaran : " + balok.luas());
-                lkelilinglingkaran.setText("Keliling Lingkaran : " + balok.keliling());
+                lluaspersegi.setText("Luas Persegi : " + balok.luas());
+                lkelilingpersegi.setText("Keliling Persegi : " + balok.keliling());
                 lvolumebalok.setText("Volume Balok : " + balok.volume());
                 lluasbalok.setText("Luas Balok : " + balok.luas(tinggi)); 
                 
@@ -110,8 +108,8 @@ class GUI extends JFrame implements ActionListener{
             fpanjang.setText("");
             ftinggi.setText("");
             flebar.setText("");
-            lluaslingkaran.setText("");
-            lkelilinglingkaran.setText("");
+            lluaspersegi.setText("");
+            lkelilingpersegi.setText("");
             lvolumebalok.setText("");
             lluasbalok.setText("");
             
